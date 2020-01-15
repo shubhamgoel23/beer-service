@@ -90,13 +90,12 @@ public class BeerControllerTest {
                                 fieldWithPath("id").description("Id of Beer"),
                                 fieldWithPath("version").description("Version number"),
                                 fieldWithPath("createdDate").description("Date Created"),
-                                fieldWithPath("lastModifiedDate").description("Date Updated"),
+                                fieldWithPath("modifiedDate").description("Date Updated"),
                                 fieldWithPath("beerName").description("Beer Name"),
                                 fieldWithPath("beerStyle").description("Beer Style"),
                                 fieldWithPath("upc").description("UPC of Beer"),
                                 fieldWithPath("price").description("Price"),
-                                fieldWithPath("quantityOnHand").description("Quantity On hand"),
-                                fieldWithPath("modifiedDate").description("modifiedDate")
+                                fieldWithPath("quantityOnHand").description("Quantity On hand")
                         )));
 
 	}
