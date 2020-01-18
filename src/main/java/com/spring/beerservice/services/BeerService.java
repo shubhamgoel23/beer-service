@@ -10,12 +10,14 @@ import com.spring.beerservice.web.model.BeerStyleEnum;
 
 public interface BeerService {
 
-	BeerDto getBeerById(UUID id);
+	BeerDto getBeerById(UUID id, Boolean showInventoryOnHand);
 
 	BeerDto saveNewBeer(BeerDto beerDto);
 
 	BeerDto updateBeerById(UUID id, BeerDto beerDto);
 
 	BeerPagedList listBeers(String beerName, BeerStyleEnum beerStyle, PageRequest of, Boolean showInventoryOnHand);
+	
+	BeerDto getByUpc(String upc);
 
 }

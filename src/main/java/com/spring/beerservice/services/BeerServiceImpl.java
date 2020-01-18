@@ -3,6 +3,7 @@ package com.spring.beerservice.services;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -25,10 +26,19 @@ public class BeerServiceImpl implements BeerService {
 	private final BeerRepository beerRepository;
 	private final BeerMapper beerMapper;
 
+	@Cacheable(cacheNames = "beerCache", key = "#beerId", condition = "#showInventoryOnHand == false ")
 	@Override
-	public BeerDto getBeerById(UUID id) {
+	public BeerDto getBeerById(UUID id, Boolean showInventoryOnHand) {
 
-		return beerMapper.beerToBeerDto(beerRepository.findById(id).orElseThrow(NotFoundException::new));
+		if (showInventoryOnHand) {
+            return beerMapper.beerToBeerDtoWithInventory(
+                    beerRepository.findById(id).orElseThrow(NotFoundException::new)
+            );
+        } else {
+            return beerMapper.beerToBeerDto(
+                    beerRepository.findById(id).orElseThrow(NotFoundException::new)
+            );
+        }
 	}
 
 	@Override
@@ -50,10 +60,12 @@ public class BeerServiceImpl implements BeerService {
 		return beerMapper.beerToBeerDto(beerRepository.save(beer));
 	}
 
+	@Cacheable(cacheNames = "beerListCache", condition = "#showInventoryOnHand == false ")
 	@Override
 	public BeerPagedList listBeers(String beerName, BeerStyleEnum beerStyle, PageRequest pageRequest,
 			Boolean showInventoryOnHand) {
 
+		System.out.println("im called");
 		BeerPagedList beerPagedList;
 		Page<Beer> beerPage;
 
@@ -85,5 +97,11 @@ public class BeerServiceImpl implements BeerService {
 
 		return beerPagedList;
 	}
+	
+	@Cacheable(cacheNames = "beerUpcCache")
+    @Override
+    public BeerDto getByUpc(String upc) {
+        return beerMapper.beerToBeerDto(beerRepository.findByUpc(upc));
+    }
 
 }
