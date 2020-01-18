@@ -104,8 +104,8 @@ public class BeerControllerTest {
 	void saveNewBeer() throws Exception {
 		BeerDto beerDto =  BeerDto.builder()
 							.beerName("Mango Punch")
-							.beerStyle(BeerStyleEnum.ALE)
-							.upc(2378L)
+							.beerStyle(BeerStyleEnum.GOSE)
+							.upc("2378L")
 							.price(new BigDecimal(215.76))
 							.build();
 		String beerDtoJson = objectMapper.writeValueAsString(beerDto);
