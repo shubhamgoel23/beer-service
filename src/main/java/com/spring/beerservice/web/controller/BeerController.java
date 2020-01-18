@@ -81,5 +81,10 @@ public class BeerController {
 
 		return new ResponseEntity<>(beerService.updateBeerById(id, beerDto), HttpStatus.NO_CONTENT);
 	}
+	
+	@GetMapping("beerUpc/{upc}")
+    public ResponseEntity<BeerDto> getBeerByUpc(@PathVariable("upc") String upc){
+        return new ResponseEntity<>(beerService.getByUpc(upc), HttpStatus.OK);
+    }
 
 }
