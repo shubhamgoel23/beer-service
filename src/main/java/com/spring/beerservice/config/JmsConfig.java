@@ -6,6 +6,8 @@ import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 
 public class JmsConfig {
+	
+	public static final String BREWING_REQUEST_QUEUE="brewing-request";
 
 	@Bean//serialize the message content to json using text message
 	public MessageConverter messageConverter() {
