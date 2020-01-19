@@ -13,9 +13,9 @@ import com.spring.beerservice.domain.Beer;
 import com.spring.beerservice.repositories.BeerRepository;
 import com.spring.beerservice.web.controller.NotFoundException;
 import com.spring.beerservice.web.mapper.BeerMapper;
-import com.spring.beerservice.web.model.BeerDto;
-import com.spring.beerservice.web.model.BeerPagedList;
-import com.spring.beerservice.web.model.BeerStyleEnum;
+import com.spring.common.model.BeerDto;
+import com.spring.common.model.BeerPagedList;
+import com.spring.common.model.BeerStyleEnum;
 
 import lombok.RequiredArgsConstructor;
 

@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.spring.beerservice.config.JmsConfig;
 import com.spring.beerservice.domain.Beer;
-import com.spring.beerservice.events.BrewBeerEvent;
 import com.spring.beerservice.repositories.BeerRepository;
 import com.spring.beerservice.services.inventory.BeerInventoryService;
 import com.spring.beerservice.web.mapper.BeerMapper;
+import com.spring.common.events.BrewBeerEvent;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

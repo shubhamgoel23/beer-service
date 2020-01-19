@@ -1,15 +1,11 @@
 package com.spring.beerservice.web.controller;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.BDDMockito.given;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.get;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.post;
 import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
 import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -27,8 +23,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.beerservice.repositories.BeerRepository;
 import com.spring.beerservice.services.BeerService;
-import com.spring.beerservice.web.model.BeerDto;
-import com.spring.beerservice.web.model.BeerStyleEnum;
+import com.spring.common.model.BeerDto;
+import com.spring.common.model.BeerStyleEnum;
 
 @ExtendWith(RestDocumentationExtension.class)
 @AutoConfigureRestDocs

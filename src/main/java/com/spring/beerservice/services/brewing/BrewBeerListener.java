@@ -7,10 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.beerservice.config.JmsConfig;
 import com.spring.beerservice.domain.Beer;
-import com.spring.beerservice.events.BrewBeerEvent;
-import com.spring.beerservice.events.NewInventoryEvent;
 import com.spring.beerservice.repositories.BeerRepository;
-import com.spring.beerservice.web.model.BeerDto;
+import com.spring.common.events.BrewBeerEvent;
+import com.spring.common.events.NewInventoryEvent;
+import com.spring.common.model.BeerDto;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

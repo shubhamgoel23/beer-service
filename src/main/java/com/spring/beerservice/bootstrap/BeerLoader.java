@@ -3,11 +3,10 @@ package com.spring.beerservice.bootstrap;
 import java.math.BigDecimal;
 
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 
 import com.spring.beerservice.domain.Beer;
 import com.spring.beerservice.repositories.BeerRepository;
-import com.spring.beerservice.web.model.BeerStyleEnum;
+import com.spring.common.model.BeerStyleEnum;
 
 //@Component
 public class BeerLoader implements CommandLineRunner {

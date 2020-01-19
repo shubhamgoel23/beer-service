@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.beerservice.services.BeerService;
-import com.spring.beerservice.web.model.BeerDto;
-import com.spring.beerservice.web.model.BeerPagedList;
-import com.spring.beerservice.web.model.BeerStyleEnum;
+import com.spring.common.model.BeerDto;
+import com.spring.common.model.BeerPagedList;
+import com.spring.common.model.BeerStyleEnum;
 
 import lombok.RequiredArgsConstructor;
 

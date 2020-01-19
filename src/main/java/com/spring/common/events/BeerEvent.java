@@ -1,14 +1,13 @@
-package com.spring.beerservice.events;
+package com.spring.common.events;
 
 import java.io.Serializable;
 
-import com.spring.beerservice.web.model.BeerDto;
+import com.spring.common.model.BeerDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @Data
 @AllArgsConstructor

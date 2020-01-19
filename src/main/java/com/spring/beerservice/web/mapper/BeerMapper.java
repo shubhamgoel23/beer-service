@@ -4,7 +4,7 @@ import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 
 import com.spring.beerservice.domain.Beer;
-import com.spring.beerservice.web.model.BeerDto;
+import com.spring.common.model.BeerDto;
 
 @Mapper(uses = {DateMapper.class})
 @DecoratedWith(BeerMapperDecorator.class)

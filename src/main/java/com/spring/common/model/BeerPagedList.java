@@ -1,4 +1,4 @@
-package com.spring.beerservice.web.model;
+package com.spring.common.model;
 
 import java.io.Serializable;
 import java.util.List;

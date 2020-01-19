@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.spring.beerservice.domain.Beer;
 import com.spring.beerservice.services.inventory.BeerInventoryService;
-import com.spring.beerservice.web.model.BeerDto;
+import com.spring.common.model.BeerDto;
 
 public abstract class BeerMapperDecorator implements BeerMapper {
 
