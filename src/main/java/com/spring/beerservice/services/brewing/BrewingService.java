@@ -1,4 +1,4 @@
-package com.spring.beerservice.services;
+package com.spring.beerservice.services.brewing;
 
 import java.util.List;
 
