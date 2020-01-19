@@ -5,6 +5,8 @@ import org.springframework.jms.support.converter.MappingJackson2MessageConverter
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class JmsConfig {
 	
 	public static final String BREWING_REQUEST_QUEUE="brewing-request";
@@ -15,6 +17,7 @@ public class JmsConfig {
 		MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
 		converter.setTargetType(MessageType.TEXT);
 		converter.setTypeIdPropertyName("_type");
+//		converter.setObjectMapper(objectMapper);
 		return converter;
 	}
 }

@@ -2,6 +2,9 @@ package com.spring.beerservice.events;
 
 import com.spring.beerservice.web.model.BeerDto;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class BrewBeerEvent extends BeerEvent{
 
 	/**

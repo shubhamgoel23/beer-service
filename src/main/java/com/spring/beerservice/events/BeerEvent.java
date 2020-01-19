@@ -4,12 +4,15 @@ import java.io.Serializable;
 
 import com.spring.beerservice.web.model.BeerDto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Data
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class BeerEvent implements Serializable{
 	
@@ -18,7 +21,7 @@ public class BeerEvent implements Serializable{
 	 */
 	private static final long serialVersionUID = 26215217518935101L;
 	
-	private final BeerDto beerDto;
+	private  BeerDto beerDto;
 	
 	
 
